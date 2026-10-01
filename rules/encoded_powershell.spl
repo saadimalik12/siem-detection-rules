@@ -1,0 +1,2 @@
+index=main sourcetype="WinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1 Image="*powershell.exe" (CommandLine="*-enc*" OR CommandLine="*-EncodedCommand*" OR CommandLine="*-e *" OR CommandLine="*bypass*")
+| table _time, ComputerName, User, Image, CommandLine
